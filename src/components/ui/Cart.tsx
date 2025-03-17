@@ -9,7 +9,7 @@ import {
   ArrowRight,
   Leaf
 } from 'lucide-react';
-import Button from './Button';
+import { Button } from './button';
 import { cn } from '@/lib/utils';
 
 const Cart = () => {
@@ -146,6 +146,7 @@ const Cart = () => {
               <Button 
                 fullWidth 
                 className="mt-4"
+                variant="primary"
                 icon={<ArrowRight className="w-4 h-4" />}
                 iconPosition="right"
               >

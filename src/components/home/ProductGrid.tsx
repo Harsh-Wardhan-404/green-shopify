@@ -2,8 +2,8 @@
 import React from 'react';
 import ProductCard, { Product } from '../ui/ProductCard';
 import { cn } from '@/lib/utils';
-import Button from '../ui/Button';
 import { ArrowRight } from 'lucide-react';
+import { Button } from '../ui/button';
 
 interface ProductGridProps {
   title?: string;

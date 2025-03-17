@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
-import Button from '../ui/Button';
 import { ArrowRight, ShoppingCart, Leaf } from 'lucide-react';
+import { Button } from '../ui/button';
 
 const Hero = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -39,6 +39,7 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <Button 
                 size="lg" 
+                variant="primary"
                 icon={<ShoppingCart className="w-4 h-4" />}
               >
                 Shop Now
