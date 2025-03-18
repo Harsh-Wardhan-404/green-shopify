@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Link from 'next/link';
 import { ArrowRight, Smartphone, ShoppingBag, Home, Sparkles, Leaf } from 'lucide-react';
 
 const CategoryCard = ({ 
@@ -39,13 +40,13 @@ const CategoryCard = ({
         </div>
         
         <div className="pt-4">
-          <a 
+          <Link 
             href={`/category/${title.toLowerCase()}`} 
             className="inline-flex items-center text-sm font-medium"
           >
             Explore
             <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </a>
+          </Link>
         </div>
       </div>
     </div>

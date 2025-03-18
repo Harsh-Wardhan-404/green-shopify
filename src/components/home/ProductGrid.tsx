@@ -1,5 +1,6 @@
 
 import React from 'react';
+import Link from 'next/link';
 import ProductCard, { Product } from '../ui/ProductCard';
 import { cn } from '@/lib/utils';
 import { ArrowRight } from 'lucide-react';
@@ -40,14 +41,16 @@ const ProductGrid = ({
         
         {showViewAll && (
           <div className="mt-12 text-center">
-            <Button 
-              variant="outline" 
-              icon={<ArrowRight className="w-4 h-4" />}
-              iconPosition="right"
-              className="hover:bg-green-600 hover:text-white hover:border-green-600"
-            >
-              View All Products
-            </Button>
+            <Link href="/products">
+              <Button 
+                variant="outline" 
+                icon={<ArrowRight className="w-4 h-4" />}
+                iconPosition="right"
+                className="hover:bg-green-600 hover:text-white hover:border-green-600"
+              >
+                View All Products
+              </Button>
+            </Link>
           </div>
         )}
       </div>

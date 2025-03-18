@@ -1,5 +1,6 @@
 
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 import { useIsMobile } from '@/hooks/use-mobile';
 import { 
   ShoppingCart, 
@@ -31,7 +32,7 @@ const Header = () => {
   }, []);
 
   const categories = [
-    "Electronics", "Clothing", "Home", "Beauty", "Eco-friendly"
+    "Electronics", "Fashion", "Home", "Beauty", "Eco"
   ];
 
   return (
@@ -46,24 +47,24 @@ const Header = () => {
           {/* Logo */}
           <div className="flex items-center">
             <Leaf className="w-6 h-6 text-green-600 mr-2" />
-            <a 
+            <Link 
               href="/" 
               className="text-lg md:text-xl font-semibold"
             >
               shop<span className="text-green-600">.ai</span>
-            </a>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             {categories.map((category) => (
-              <a 
+              <Link 
                 key={category}
                 href={`/category/${category.toLowerCase()}`}
                 className="text-sm text-foreground/80 hover:text-green-600 transition-colors"
               >
                 {category}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -98,13 +99,13 @@ const Header = () => {
           <div className="mt-4 py-4 border-t border-gray-100 slide-up">
             <nav className="flex flex-col space-y-4">
               {categories.map((category) => (
-                <a 
+                <Link 
                   key={category}
                   href={`/category/${category.toLowerCase()}`}
                   className="text-sm hover:text-green-600 transition-colors"
                 >
                   {category}
-                </a>
+                </Link>
               ))}
               <div className="flex space-x-4 pt-2">
                 <button className="hover:text-green-600 transition-colors flex items-center space-x-2">
